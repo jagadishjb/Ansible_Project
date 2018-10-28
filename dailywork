@@ -1,0 +1,22 @@
+creating a vm
+===
+1. security group
+2. key pair
+3. create vm
+	- image
+	- machine type
+	- storage
+	- network
+	- security group
+	- tags
+	- keypair
+
+
+external variable
+vpcid=vpc-0f964a98580081167
+subnetid=subnet-03e29215150e173ab
+region=us-east-1
+myaccesskey=AKIAJY3VEEVJAEBLPF7A
+mysecretkey="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"
+
+ansible-playbook deployvm.yml -e 'vpcid=vpc-0f964a98580081167 subnetid=subnet-03e29215150e173ab region=us-east-1 myaccesskey=AKIAJY3VEEVJAEBLPF7A mysecretkey="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"'

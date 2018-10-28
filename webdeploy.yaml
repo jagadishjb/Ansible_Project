@@ -1,5 +1,7 @@
 ---
-- hosts: webservers
+- hosts: security_group_webinstsg
+  vars:
+    web_admin: jaga.dsh@gmail.com
   tasks: 
   - name: install the latest version of Apache
     yum:
@@ -8,6 +10,9 @@
     loop:
       - httpd
       - mariadb-server
+    register: installoutput
+  - debug:
+      var: installoutput
   - name: copy configuration
     copy:
       src: /home/ec2-user/environment/Ansible_Project/httpd.conf

@@ -1,0 +1,454 @@
+ansible-playbook 2.7.1
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/ec2-user/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.14 (default, May  2 2018, 18:31:34) [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]
+Using /etc/ansible/ansible.cfg as config file
+setting up inventory plugins
+/etc/ansible/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+Skipping due to inventory source not existing or not being readable by the current user
+/etc/ansible/hosts did not meet script requirements, check plugin documentation if this is unexpected
+Skipping due to inventory source not existing or not being readable by the current user
+/etc/ansible/hosts did not meet yaml requirements, check plugin documentation if this is unexpected
+Skipping due to inventory source not existing or not being readable by the current user
+/etc/ansible/hosts did not meet ini requirements, check plugin documentation if this is unexpected
+/etc/ansible/hosts did not meet auto requirements, check plugin documentation if this is unexpected
+Loading callback plugin default of type stdout, v2.0 from /usr/local/lib/python2.7/site-packages/ansible/plugins/callback/default.pyc
+
+PLAYBOOK: deployvm.yml ******************************************************************************************************************************************
+2 plays in deployvm.yml
+
+PLAY [localhost] ************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************
+task path: /home/ec2-user/environment/Ansible_Project/deployvm.yml:2
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ec2-user
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ec2-user && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105 `" && echo ansible-tmp-1540637763.77-211229633730105="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105 `" ) && sleep 0'
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/basic.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/namespace.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/ansible_collector.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/default_collectors.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/parsing/convert_bool.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/_collections_compat.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/six/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/_text.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/parsing/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/pycompat24.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/process.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/file.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/compat.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/timeout.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/collector.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/freebsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/openbsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/base.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/dragonfly.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/dragonfly.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/aix.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/aix.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/linux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/platform.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/hpux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/cmdline.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/user.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/hurd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/other/facter.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/hpux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/distribution.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/freebsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/openbsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/darwin.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/iscsi.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/linux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/sunos.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/sunos.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/chroot.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/apparmor.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/openbsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/local.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/other/ohai.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/other/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/service_mgr.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/hurd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/hpux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/fips.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/selinux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/pkg_mgr.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/linux.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/base.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/darwin.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/dragonfly.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/ssh_pub_keys.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/lsb.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/date_time.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/netbsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/base.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/env.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/freebsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/netbsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/hardware/netbsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/caps.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/dns.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/sunos.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/system/python.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/network/generic_bsd.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/virtual/sysctl.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/utils.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/facts/sysctl.py
+Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/system/setup.py
+<127.0.0.1> PUT /home/ec2-user/.ansible/tmp/ansible-local-157496oXVpj/tmpdmrxaG TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105/AnsiballZ_setup.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python2.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105/AnsiballZ_setup.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540637763.77-211229633730105/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost]
+META: ran handlers
+
+TASK [example using security group rule descriptions] ***********************************************************************************************************
+task path: /home/ec2-user/environment/Ansible_Project/deployvm.yml:10
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ec2-user
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ec2-user && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693 `" && echo ansible-tmp-1540637764.41-260021282551693="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693 `" ) && sleep 0'
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/network/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/ec2.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/aws/core.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/six/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/aws/iam.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/_text.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/network/common/utils.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/basic.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/aws/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/network/common/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/aws/waiters.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/dict_transformations.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/cloud.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/ansible_release.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/parsing/convert_bool.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/_collections_compat.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/file.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/parsing/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/pycompat24.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/process.py
+Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/cloud/amazon/ec2_group.py
+<127.0.0.1> PUT /home/ec2-user/.ansible/tmp/ansible-local-157496oXVpj/tmpyg3Nbq TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693/AnsiballZ_ec2_group.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693/AnsiballZ_ec2_group.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python2.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693/AnsiballZ_ec2_group.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540637764.41-260021282551693/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "changed": false, 
+    "description": "sg with rule descriptions", 
+    "group_id": "sg-0342b4a60376ae5e7", 
+    "group_name": "webinstsg", 
+    "invocation": {
+        "module_args": {
+            "aws_access_key": "AKIAJY3VEEVJAEBLPF7A", 
+            "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER", 
+            "description": "sg with rule descriptions", 
+            "ec2_url": null, 
+            "group_id": null, 
+            "name": "webinstsg", 
+            "profile": null, 
+            "purge_rules": true, 
+            "purge_rules_egress": true, 
+            "purge_tags": true, 
+            "region": "us-east-1", 
+            "rules": [
+                {
+                    "cidr_ip": "0.0.0.0/0", 
+                    "ports": [
+                        80, 
+                        22
+                    ], 
+                    "proto": "tcp", 
+                    "rule_desc": "allow all on port 80"
+                }
+            ], 
+            "rules_egress": null, 
+            "security_token": null, 
+            "state": "present", 
+            "tags": null, 
+            "validate_certs": true, 
+            "vpc_id": "vpc-0f964a98580081167"
+        }
+    }, 
+    "ip_permissions": [
+        {
+            "from_port": 80, 
+            "ip_protocol": "tcp", 
+            "ip_ranges": [
+                {
+                    "cidr_ip": "0.0.0.0/0", 
+                    "description": "allow all on port 80"
+                }
+            ], 
+            "ipv6_ranges": [], 
+            "prefix_list_ids": [], 
+            "to_port": 80, 
+            "user_id_group_pairs": []
+        }, 
+        {
+            "from_port": 22, 
+            "ip_protocol": "tcp", 
+            "ip_ranges": [
+                {
+                    "cidr_ip": "0.0.0.0/0", 
+                    "description": "allow all on port 80"
+                }
+            ], 
+            "ipv6_ranges": [], 
+            "prefix_list_ids": [], 
+            "to_port": 22, 
+            "user_id_group_pairs": []
+        }
+    ], 
+    "ip_permissions_egress": [
+        {
+            "ip_protocol": "-1", 
+            "ip_ranges": [
+                {
+                    "cidr_ip": "0.0.0.0/0"
+                }
+            ], 
+            "ipv6_ranges": [], 
+            "prefix_list_ids": [], 
+            "user_id_group_pairs": []
+        }
+    ], 
+    "owner_id": "711075564712", 
+    "tags": {}, 
+    "vpc_id": "vpc-0f964a98580081167"
+}
+
+TASK [debug] ****************************************************************************************************************************************************
+task path: /home/ec2-user/environment/Ansible_Project/deployvm.yml:26
+ok: [localhost] => {
+    "webinstsg_output": {
+        "changed": false, 
+        "description": "sg with rule descriptions", 
+        "failed": false, 
+        "group_id": "sg-0342b4a60376ae5e7", 
+        "group_name": "webinstsg", 
+        "ip_permissions": [
+            {
+                "from_port": 80, 
+                "ip_protocol": "tcp", 
+                "ip_ranges": [
+                    {
+                        "cidr_ip": "0.0.0.0/0", 
+                        "description": "allow all on port 80"
+                    }
+                ], 
+                "ipv6_ranges": [], 
+                "prefix_list_ids": [], 
+                "to_port": 80, 
+                "user_id_group_pairs": []
+            }, 
+            {
+                "from_port": 22, 
+                "ip_protocol": "tcp", 
+                "ip_ranges": [
+                    {
+                        "cidr_ip": "0.0.0.0/0", 
+                        "description": "allow all on port 80"
+                    }
+                ], 
+                "ipv6_ranges": [], 
+                "prefix_list_ids": [], 
+                "to_port": 22, 
+                "user_id_group_pairs": []
+            }
+        ], 
+        "ip_permissions_egress": [
+            {
+                "ip_protocol": "-1", 
+                "ip_ranges": [
+                    {
+                        "cidr_ip": "0.0.0.0/0"
+                    }
+                ], 
+                "ipv6_ranges": [], 
+                "prefix_list_ids": [], 
+                "user_id_group_pairs": []
+            }
+        ], 
+        "owner_id": "711075564712", 
+        "tags": {}, 
+        "vpc_id": "vpc-0f964a98580081167"
+    }
+}
+
+TASK [Create VMS] ***********************************************************************************************************************************************
+task path: /home/ec2-user/environment/Ansible_Project/deployvm.yml:28
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ec2-user
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ec2-user && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530 `" && echo ansible-tmp-1540637765.8-277503727533530="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530 `" ) && sleep 0'
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/_text.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/basic.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/ec2.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/six/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/parsing/convert_bool.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/_collections_compat.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/file.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/parsing/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/pycompat24.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/process.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/__init__.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/common/dict_transformations.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/cloud.py
+Using module_utils file /usr/local/lib/python2.7/site-packages/ansible/module_utils/ansible_release.py
+Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/cloud/amazon/ec2.py
+<127.0.0.1> PUT /home/ec2-user/.ansible/tmp/ansible-local-157496oXVpj/tmpaiZMUv TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530/AnsiballZ_ec2.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530/AnsiballZ_ec2.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python2.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530/AnsiballZ_ec2.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540637765.8-277503727533530/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => (item=[u'subnet-03e29215150e173ab', u'subnet-048951c1ec3d5d3f0']) => {
+    "changed": false, 
+    "instance_ids": null, 
+    "instances": [], 
+    "invocation": {
+        "module_args": {
+            "assign_public_ip": true, 
+            "aws_access_key": "AKIAJY3VEEVJAEBLPF7A", 
+            "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER", 
+            "count": 1, 
+            "count_tag": "{'Name': 'subnet-048951c1ec3d5d3f0'}", 
+            "ebs_optimized": false, 
+            "ec2_url": null, 
+            "exact_count": 1, 
+            "group": null, 
+            "group_id": [
+                "sg-0342b4a60376ae5e7"
+            ], 
+            "id": null, 
+            "image": "ami-0922553b7b0369273", 
+            "instance_ids": null, 
+            "instance_initiated_shutdown_behavior": null, 
+            "instance_profile_name": null, 
+            "instance_tags": {
+                "Name": "subnet-048951c1ec3d5d3f0"
+            }, 
+            "instance_type": "t2.micro", 
+            "kernel": null, 
+            "key_name": "webkey", 
+            "monitoring": false, 
+            "network_interfaces": null, 
+            "placement_group": null, 
+            "private_ip": null, 
+            "profile": null, 
+            "ramdisk": null, 
+            "region": "us-east-1", 
+            "security_token": null, 
+            "source_dest_check": null, 
+            "spot_launch_group": null, 
+            "spot_price": null, 
+            "spot_type": "one-time", 
+            "spot_wait_timeout": "600", 
+            "state": "present", 
+            "tenancy": "default", 
+            "termination_protection": null, 
+            "user_data": null, 
+            "validate_certs": true, 
+            "volumes": null, 
+            "vpc_subnet_id": "subnet-03e29215150e173ab", 
+            "wait": true, 
+            "wait_timeout": "120", 
+            "zone": null
+        }
+    }, 
+    "item": [
+        "subnet-03e29215150e173ab", 
+        "subnet-048951c1ec3d5d3f0"
+    ], 
+    "tagged_instances": [
+        {
+            "ami_launch_index": "0", 
+            "architecture": "x86_64", 
+            "block_device_mapping": {
+                "/dev/xvda": {
+                    "delete_on_termination": true, 
+                    "status": "attached", 
+                    "volume_id": "vol-0e58b035baaf9ae67"
+                }
+            }, 
+            "dns_name": "ec2-18-207-224-140.compute-1.amazonaws.com", 
+            "ebs_optimized": false, 
+            "groups": {
+                "sg-0342b4a60376ae5e7": "webinstsg"
+            }, 
+            "hypervisor": "xen", 
+            "id": "i-03e495313b26bcc98", 
+            "image_id": "ami-0922553b7b0369273", 
+            "instance_type": "t2.micro", 
+            "kernel": null, 
+            "key_name": "webkey", 
+            "launch_time": "2018-10-27T10:47:59.000Z", 
+            "placement": "us-east-1f", 
+            "private_dns_name": "ip-172-31-73-30.ec2.internal", 
+            "private_ip": "172.31.73.30", 
+            "public_dns_name": "ec2-18-207-224-140.compute-1.amazonaws.com", 
+            "public_ip": "18.207.224.140", 
+            "ramdisk": null, 
+            "region": "us-east-1", 
+            "root_device_name": "/dev/xvda", 
+            "root_device_type": "ebs", 
+            "state": "running", 
+            "state_code": 16, 
+            "tags": {
+                "Name": "subnet-048951c1ec3d5d3f0"
+            }, 
+            "tenancy": "default", 
+            "virtualization_type": "hvm"
+        }
+    ]
+}
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ec2-user && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482 `" && echo ansible-tmp-1540637766.67-260579816206482="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482 `" ) && sleep 0'
+Using module file /usr/local/lib/python2.7/site-packages/ansible/modules/cloud/amazon/ec2.py
+<127.0.0.1> PUT /home/ec2-user/.ansible/tmp/ansible-local-157496oXVpj/tmpwWHTqU TO /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/ /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python2.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/ > /dev/null 2>&1 && sleep 0'
+The full traceback is:
+Traceback (most recent call last):
+  File "/home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py", line 113, in <module>
+    _ansiballz_main()
+  File "/home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py", line 105, in _ansiballz_main
+    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+  File "/home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py", line 48, in invoke_module
+    imp.load_module('__main__', mod, module, MOD_DESC)
+  File "/tmp/ansible_ec2_payload_z2utfo/__main__.py", line 1692, in <module>
+  File "/tmp/ansible_ec2_payload_z2utfo/__main__.py", line 1678, in main
+  File "/tmp/ansible_ec2_payload_z2utfo/__main__.py", line 887, in enforce_count
+  File "/tmp/ansible_ec2_payload_z2utfo/__main__.py", line 568, in find_running_instances_by_count_tag
+  File "/tmp/ansible_ec2_payload_z2utfo/__main__.py", line 600, in get_reservations
+  File "/usr/lib/python2.7/dist-packages/boto/vpc/__init__.py", line 1152, in get_all_subnets
+    return self.get_list('DescribeSubnets', params, [('item', Subnet)])
+  File "/usr/lib/python2.7/dist-packages/boto/connection.py", line 1186, in get_list
+    raise self.ResponseError(response.status, response.reason, body)
+boto.exception.EC2ResponseError: EC2ResponseError: 400 Bad Request
+<?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>InvalidSubnetID.NotFound</Code><Message>The subnet ID 'webservers-1' does not exist</Message></Error></Errors><RequestID>75847b2d-e914-43ea-8407-81a37b9b6478</RequestID></Response>
+failed: [localhost] (item=[u'webservers-1', u'webservers-2']) => {
+    "changed": false, 
+    "item": [
+        "webservers-1", 
+        "webservers-2"
+    ], 
+    "module_stderr": "Traceback (most recent call last):\n  File \"/home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py\", line 113, in <module>\n    _ansiballz_main()\n  File \"/home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py\", line 105, in _ansiballz_main\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\n  File \"/home/ec2-user/.ansible/tmp/ansible-tmp-1540637766.67-260579816206482/AnsiballZ_ec2.py\", line 48, in invoke_module\n    imp.load_module('__main__', mod, module, MOD_DESC)\n  File \"/tmp/ansible_ec2_payload_z2utfo/__main__.py\", line 1692, in <module>\n  File \"/tmp/ansible_ec2_payload_z2utfo/__main__.py\", line 1678, in main\n  File \"/tmp/ansible_ec2_payload_z2utfo/__main__.py\", line 887, in enforce_count\n  File \"/tmp/ansible_ec2_payload_z2utfo/__main__.py\", line 568, in find_running_instances_by_count_tag\n  File \"/tmp/ansible_ec2_payload_z2utfo/__main__.py\", line 600, in get_reservations\n  File \"/usr/lib/python2.7/dist-packages/boto/vpc/__init__.py\", line 1152, in get_all_subnets\n    return self.get_list('DescribeSubnets', params, [('item', Subnet)])\n  File \"/usr/lib/python2.7/dist-packages/boto/connection.py\", line 1186, in get_list\n    raise self.ResponseError(response.status, response.reason, body)\nboto.exception.EC2ResponseError: EC2ResponseError: 400 Bad Request\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response><Errors><Error><Code>InvalidSubnetID.NotFound</Code><Message>The subnet ID 'webservers-1' does not exist</Message></Error></Errors><RequestID>75847b2d-e914-43ea-8407-81a37b9b6478</RequestID></Response>\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+	to retry, use: --limit @/home/ec2-user/environment/Ansible_Project/deployvm.retry
+
+PLAY RECAP ******************************************************************************************************************************************************
+localhost                  : ok=3    changed=0    unreachable=0    failed=1   
+
